@@ -7,7 +7,9 @@ import Cart from "./components/Cart/Cart";
 import { useEffect, useState } from "react";
 
 function App() {
+  //Open state is for wheather cart is open or not
   const [open, setOpen] = useState(false);
+  //Search state is for Filtering Product
   const [search, setSearch] = useState("");
 
   return (

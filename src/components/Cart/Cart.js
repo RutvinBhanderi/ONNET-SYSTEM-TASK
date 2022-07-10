@@ -6,9 +6,12 @@ import { GiShoppingCart } from "react-icons/gi";
 import { TbMoodEmpty } from "react-icons/tb";
 import { addQuantity, removeQuantity } from "../../Reducer/CartSlice";
 const Cart = ({ open }) => {
+  //Selection Cart from Store
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
   const handleQuantity = (type, item) => {
+    //Handles the Quantity of Product
     if (type === "increment") {
       console.log("add :" + item.product__id);
       dispatch(addQuantity(item));

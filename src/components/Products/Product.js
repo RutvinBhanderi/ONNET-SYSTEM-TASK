@@ -22,6 +22,7 @@ const Product = ({ ...item }) => {
   );
 
   useEffect(() => {
+    //Check if Product is Present inside cart
     if (product.length) {
       setAdd(true);
     }
@@ -29,8 +30,6 @@ const Product = ({ ...item }) => {
 
   const dispatch = useDispatch();
   const handleAdd = (item) => {
-    console.log("hello");
-
     setAdd((prev) => !prev);
     if (add) {
       dispatch(removeProduct(item));

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { BsCart3, BsFillPersonFill } from "react-icons/bs";
 
 const Navbar = ({ setOpen, setSearch }) => {
+  //Select TotalQuantity
   const qty = useSelector((state) => state.cart.totalQty);
 
   return (
